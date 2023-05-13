@@ -1,0 +1,109 @@
+// Section definition
+//  - each rule is in it's own section
+//  - all unspecified .INPUTS are ignored
+//  - all unspecified .OUTPUTS get their default value (0 if not defined)
+//
+//  .RULE { (<input_filter>), (output_setting) }
+//
+//    <input_filter>   = <input_name>=<value>, ...
+//    <output_setting> = <output_name>=<value>, ...
+//                       if <value> is unspecified the output get its inverted default value
+//    <input_name>     can be an .INPUT(S) or a .SIGNAL(S)
+//    <value>          can be a number or a .CONSTANT(S)
+
+// LUI
+.RULE { (opcode=0b01101),               (Valid_instr, Imm_ctrl=U_type, B_mux=IMM, rd_en) }
+// AUIPC
+.RULE { (opcode=0b00101),               (Valid_instr, Imm_ctrl=U_type, A_mux=PC, B_mux=IMM, rd_en) }
+
+// JAL ==TODO==
+.RULE { (opcode=0b11011),               (Valid_instr, Imm_ctrl=J_type, J_JAL, rd_en) }
+// JALR ==TODO==
+.RULE { (opcode=0b11001, funct3=0b000), (Valid_instr, Imm_ctrl=I_type, J_JALR, rd_en, rs1_en) }
+
+// BEQ ==TODO==
+.RULE { (opcode=0b11000, funct3=0b000), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SUB) }
+// BNE ==TODO==
+.RULE { (opcode=0b11000, funct3=0b001), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SUB) }
+// BLT ==TODO==
+.RULE { (opcode=0b11000, funct3=0b100), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLT) }
+// BGE ==TODO==
+.RULE { (opcode=0b11000, funct3=0b101), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLT) }
+// BLTU ==TODO==
+.RULE { (opcode=0b11000, funct3=0b110), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
+// BGEU ==TODO==
+.RULE { (opcode=0b11000, funct3=0b111), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
+
+// LB ==TODO==
+.RULE { (opcode=0b00000, funct3=0b000), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
+// LH ==TODO==
+.RULE { (opcode=0b00000, funct3=0b001), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
+// LW ==TODO==
+.RULE { (opcode=0b00000, funct3=0b010), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
+// LBU ==TODO==
+.RULE { (opcode=0b00000, funct3=0b100), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
+// LHU ==TODO==
+.RULE { (opcode=0b00000, funct3=0b101), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
+
+// SB ==TODO==
+.RULE { (opcode=0b01000, funct3=0b000), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
+// SH ==TODO==
+.RULE { (opcode=0b01000, funct3=0b001), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
+// SW ==TODO==
+.RULE { (opcode=0b01000, funct3=0b010), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
+
+// ADDI
+.RULE { (opcode=0b00100, funct3=0b000),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD) }
+// SLLI
+.RULE { (opcode=0b00100, funct3=0b001, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_SLL) }
+// SRLI
+.RULE { (opcode=0b00100, funct3=0b101, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_SRL) }
+// SRAI
+.RULE { (opcode=0b00100, funct3=0b101, funct7=0b0100000), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_SRA) }
+// XORI
+.RULE { (opcode=0b00100, funct3=0b100),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_XOR) }
+// ORI
+.RULE { (opcode=0b00100, funct3=0b110),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_OR) }
+// ANDI
+.RULE { (opcode=0b00100, funct3=0b111),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_AND) }
+// SLTI
+.RULE { (opcode=0b00100, funct3=0b010),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_SLT) }
+// SLTIU
+.RULE { (opcode=0b00100, funct3=0b011),                   (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_SLTU) }
+
+// ADD
+.RULE { (opcode=0b01100, funct3=0b000, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_ADD) }
+// SUB
+.RULE { (opcode=0b01100, funct3=0b000, funct7=0b0100000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SUB) }
+// SLL
+.RULE { (opcode=0b01100, funct3=0b001, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SLL) }
+// SRL
+.RULE { (opcode=0b01100, funct3=0b101, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SRL) }
+// SRA
+.RULE { (opcode=0b01100, funct3=0b101, funct7=0b0100000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SRA) }
+// XOR
+.RULE { (opcode=0b01100, funct3=0b100, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_XOR) }
+// OR
+.RULE { (opcode=0b01100, funct3=0b110, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_OR) }
+// AND
+.RULE { (opcode=0b01100, funct3=0b111, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_AND) }
+// SLT
+.RULE { (opcode=0b01100, funct3=0b010, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SLT) }
+// SLTU
+.RULE { (opcode=0b01100, funct3=0b011, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
+
+//	// FENCE ==TODO==
+//	.RULE { (opcode=0b00011, funct3=0b000, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type) }
+//	// FENCE.TSO (optional) ==TODO==
+//	//.RULE { (opcode=0b00011, funct3=0b000, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type) }
+
+//	// ECALL ==TODO==
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00000, rs1=0b00000, rd=0b00000), (Valid_instr, Imm_ctrl=I_type) }
+//	// EBREAK ==TODO==
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00001, rs1=0b00000, rd=0b00000), (Valid_instr, Imm_ctrl=I_type) }
+
+
+
+// some spezial opcodes
+
+// NOP (pseudoinst.) encoded as ADDI x0, x0, 0

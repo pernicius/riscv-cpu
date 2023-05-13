@@ -1,0 +1,55 @@
+// Section definition
+//  - Can occur multiple times
+.CONSTANTS {
+	// <name>: <number>;
+	// 0b prefix for binary numbers
+	// 0x prefix for hexadecimal numbers
+	// no prefix for decimal numbers
+
+	// Imm_ctrl
+	R_type: 0b000;
+	I_type: 0b001;
+	S_type: 0b010;
+	B_type: 0b011;
+	U_type: 0b100;
+	J_type: 0b101;
+	//      0b110 is unused
+	//      0b111 is unused
+	
+	// A_mux
+	RS1: 0;
+	PC:  1;
+	
+	// B_mux
+	RS2: 0;
+	IMM: 1;
+
+	// ALU_ctrl (ADD/SUB)
+	ALU_ADD:  0b00000;
+	ALU_SUB:  0b00100;
+	//        0b01000 is unused (ADD)
+	//        0b01100 is unused (SUB)
+
+	// ALU_ctrl (logic)
+	ALU_XOR:  0b00001;
+	ALU_OR:   0b00101;
+	ALU_AND:  0b01001;
+	//        0b01101 is unused
+
+	// ALU_ctrl (shifter)
+	ALU_SLL:  0b00010;
+	//        0b00110 is unused
+	ALU_SRL:  0b01010;
+	ALU_SRA:  0b01110;
+
+	// ALU_ctrl (comperator - SLT/SLTU)
+	ALU_SLT:  0b00011;
+	ALU_SLTU: 0b00111;
+	//        0b01011 is unused (SLT)
+	//        0b01111 is unused (SLTU)
+
+	// Mem_mux
+	MEM_ALU:  0b00;
+	MEM_MEM:  0b01;
+	MEM_PCn:  0b10;
+}

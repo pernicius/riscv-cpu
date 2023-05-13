@@ -1,0 +1,60 @@
+// Section definition
+//  - only a single .INPUTS section is allowed
+.INPUTS {
+	// <num_bits>: <name>;
+	// use _UNUSED as name for any number of bits to be ignored
+	// counting of bits starts at first line with bit 0
+
+	5: opcode;
+	3: funct3;
+	1: funct7b0;
+	1: funct7b1_4_nonzero;
+	1: funct7b5;
+	1: funct7b6;
+	1: rd_nonzero;
+	1: rs1_nonzero;
+	1: rs2b0;
+	1: rs2b1_4_nonzero;
+//	2: _UNUSED;
+}
+
+
+// Section definition - virtual inputs which will be created out of the .INPUTS
+//  - only a single .SIGNALS section is allowed
+.SIGNALS {
+    // <name> (
+    //     <num_bits>: <input_name>;
+    //              1: <input_name>[input_bit];   (input_bit is a single bit only!)
+    //     <num_bits>: <fixed_value>;
+    // );
+    
+    funct7 (
+        1: funct7b0;
+        4: funct7b1_4_nonzero;  // all 4 bits will have the same value
+        1: funct7b5;
+        1: funct7b6;
+    );
+
+    rd  (
+        5: rd_nonzero;          // all 5 bits will have the same value
+    );
+
+    rs1 (
+        5: rs1_nonzero;         // all 5 bits will have the same value
+    );
+
+    rs2 (
+        1: rs2b0;
+        4: rs2b1_4_nonzero;     // all 4 bits will have the same value
+    );
+
+	bitdemo (
+		1: funct3[0];
+		3: funct3[1];           // all 3 bits will have the same value
+		1: funct3[2];
+		3: funct3;
+		2: 0x3;
+		2: 0b11;
+		2: 3;
+	);
+}

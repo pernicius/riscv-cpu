@@ -1,0 +1,7 @@
+#include "section-inputs.ucode"
+#include "section-outputs.ucode"
+
+#include "section-constants.ucode"
+
+#include "rules-RV32I.ucode"
+#include "rules-RV32M.ucode"
