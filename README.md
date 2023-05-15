@@ -2,14 +2,14 @@
 
 A simulated, pipelined, 32bit Risc-V CPU using [Digital](https://github.com/hneemann/Digital).
 
-### Features implemented:
-- Universal Microcode Compiler ([umcc](https://github.com/pernicius/umcc))
-- RV32I Base Integer Instruction Set (v2.1) except FENCE, ECALL, EBREAK
+### Instruction Standards:
+- [x] "RV32I" Base Integer Instruction Set (v2.1) except FENCE, ECALL, EBREAK
+- [ ] "M” Standard Extension for Integer Multiplication and Division (v2.0)
+- [ ] “C” Standard Extension for Compressed Instructions (v2.0)
+- [ ] “Zicsr” Control and Status Register (CSR) Instructions (v2.0)
 
-### Features i'm working on:
-- "M” Standard Extension for Integer Multiplication and Division (v2.0)
-- “C” Standard Extension for Compressed Instructions (v2.0)
-- “Zicsr” Control and Status Register (CSR) Instructions (v2.0)
+### other Features:
+- [x] Universal Microcode Compiler ([umcc](https://github.com/pernicius/umcc))
 
 ### Later features:
 - User/Supervisor/Machine-Mode
