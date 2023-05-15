@@ -2,7 +2,7 @@
 
 A simulated, pipelined, 32bit Risc-V CPU using [Digital](https://github.com/hneemann/Digital).
 
-### Instruction Standards:
+### Instruction Set Standards:
 - [x] "RV32I" Base Integer Instruction Set (v2.1) except FENCE, ECALL, EBREAK
 - [ ] "M” Standard Extension for Integer Multiplication and Division (v2.0)
 - [ ] “C” Standard Extension for Compressed Instructions (v2.0)
