@@ -6,13 +6,13 @@ A simulated, pipelined, 32bit Risc-V CPU using [Digital](https://github.com/hnee
 
 *(currently working on)*
 
-## TTL
+## [TTL](https://github.com/pernicius/riscv-cpu/tree/master/TTL)
 
 A version of the CPU using only/mostly discrete TTL logic.
 
 *(later...)*
 
-## FPGA
+## [FPGA](https://github.com/pernicius/riscv-cpu/tree/master/FPGA)
 
 A version of the CPU using an FPGA. Probably an Xilinx Arty-S7.
 
