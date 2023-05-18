@@ -1,6 +1,6 @@
 # My own 32bit RISC-V CPU-Projects
 
-## Digital (Sim)
+## [Digital (Sim)](https://github.com/pernicius/riscv-cpu/tree/master/Digital%20(Sim))
 
 A simulated, pipelined, 32bit Risc-V CPU using [Digital](https://github.com/hneemann/Digital).
 
