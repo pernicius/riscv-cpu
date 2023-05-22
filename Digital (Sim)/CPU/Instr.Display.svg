@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="-80 -80 220 800"
+   version="1.1">
+  <sodipodi:namedview showgrid="true">
+    <inkscape:grid
+       type="xygrid"
+       empspacing="4"
+       spacingx="5"
+       spacingy="5" />
+  </sodipodi:namedview>
+  <rect stroke="black" stroke-width="4" fill="#b4ffb4" fill-opacity="0.78431374" x="0" y="-20" width="840" height="760"/>
+    <text id="label" fill="#000000" font-size="24" text-anchor="middle" x="30" y="-20">Label</text>
+
+  <rect stroke="#a0a0a0" stroke-width="1" fill="#ffffff" fill-opacity="0.5" x="20" y="20" width="800" height="100"/>
+    <text fill="#000000" font-size="14" x="20" y="15" >OPCODE</text>
+    
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="10" y="35" width="20" height="10"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="20" y="44" >00</text>
+    <rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="10" y="55" width="20" height="10"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="20" y="64" >01</text>
+    <rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="10" y="75" width="20" height="10"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="20" y="84" >10</text>
+    <rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="10" y="95" width="20" height="10"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="20" y="104">11</text>
+    
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="69" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="80"  y="124">000</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="169" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="180" y="124">001</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="269" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="280" y="124">010</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="369" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="380" y="124">011</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="469" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="480" y="124">100</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="569" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="580" y="124">101</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="669" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="680" y="124">110</text>
+	<rect stroke="#a0a0a0" stroke-width="1" fill="#a0a0a0" x="769" y="114" width="24" height="11"/>
+    <text fill="#ffffff" font-size="12" text-anchor="middle" x="780" y="124">111</text>
+	
+    <g><circle fill="#b20000" id="pin:opLOAD"      cx="40"  cy="40"  r="3"/><text fill="#000000" font-size="14" x="63"  y="44" >LOAD</text></g>
+    <g><circle fill="#b20000" id="pin:opLOAD-FP"   cx="140" cy="40"  r="3"/><text fill="#000000" font-size="14" x="163" y="44" >LOAD-FP</text></g>
+    <g><circle fill="#b20000" id="pin:opCUST0"     cx="240" cy="40"  r="3"/><text fill="#000000" font-size="14" x="263" y="44" >custom-0</text></g>
+    <g><circle fill="#b20000" id="pin:opMISC-MEM"  cx="340" cy="40"  r="3"/><text fill="#000000" font-size="14" x="363" y="44" >MISC-MEM</text></g>
+    <g><circle fill="#b20000" id="pin:opOP-IMM"    cx="440" cy="40"  r="3"/><text fill="#000000" font-size="14" x="463" y="44" >OP-IMM</text></g>
+    <g><circle fill="#b20000" id="pin:opAUIPC"     cx="540" cy="40"  r="3"/><text fill="#000000" font-size="14" x="563" y="44" >AUIPC</text></g>
+    <g><circle fill="#b20000" id="pin:opOP-IMM-32" cx="640" cy="40"  r="3"/><text fill="#000000" font-size="14" x="663" y="44" >OP-IMM-32</text></g>
+    <g><circle fill="#b20000" id="pin:op48BIT1"    cx="740" cy="40"  r="3"/><text fill="#000000" font-size="14" x="763" y="44" >48bit</text></g>
+    
+	<g><circle fill="#b20000" id="pin:opSTORE"     cx="40"  cy="60"  r="3"/><text fill="#000000" font-size="14" x="63"  y="64" >STORE</text></g>
+    <g><circle fill="#b20000" id="pin:opSTORE-FP"  cx="140" cy="60"  r="3"/><text fill="#000000" font-size="14" x="163" y="64" >STORE-FP</text></g>
+    <g><circle fill="#b20000" id="pin:opCUST1"     cx="240" cy="60"  r="3"/><text fill="#000000" font-size="14" x="263" y="64" >custom-1</text></g>
+    <g><circle fill="#b20000" id="pin:opAMO"       cx="340" cy="60"  r="3"/><text fill="#000000" font-size="14" x="363" y="64" >AMO</text></g>
+    <g><circle fill="#b20000" id="pin:opOP"        cx="440" cy="60"  r="3"/><text fill="#000000" font-size="14" x="463" y="64" >OP</text></g>
+    <g><circle fill="#b20000" id="pin:opLUI"       cx="540" cy="60"  r="3"/><text fill="#000000" font-size="14" x="563" y="64" >LUI</text></g>
+    <g><circle fill="#b20000" id="pin:opOP-32"     cx="640" cy="60"  r="3"/><text fill="#000000" font-size="14" x="663" y="64" >OP-32</text></g>
+    <g><circle fill="#b20000" id="pin:op64BIT"     cx="740" cy="60"  r="3"/><text fill="#000000" font-size="14" x="763" y="64" >64bit</text></g>
+    
+	<g><circle fill="#b20000" id="pin:opMADD"      cx="40"  cy="80"  r="3"/><text fill="#000000" font-size="14" x="63"  y="84" >MADD</text></g>
+    <g><circle fill="#b20000" id="pin:opMSUB"      cx="140" cy="80"  r="3"/><text fill="#000000" font-size="14" x="163" y="84" >MSUB</text></g>
+    <g><circle fill="#b20000" id="pin:opNMSUB"     cx="240" cy="80"  r="3"/><text fill="#000000" font-size="14" x="263" y="84" >NMSUB</text></g>
+    <g><circle fill="#b20000" id="pin:opNMADD"     cx="340" cy="80"  r="3"/><text fill="#000000" font-size="14" x="363" y="84" >NMADD</text></g>
+    <g><circle fill="#b20000" id="pin:opOP-FP"     cx="440" cy="80"  r="3"/><text fill="#000000" font-size="14" x="463" y="84" >OP-FP</text></g>
+    <g><circle fill="#b20000" id="pin:opRES0"      cx="540" cy="80"  r="3"/><text fill="#000000" font-size="14" x="563" y="84" >reserved</text></g>
+    <g><circle fill="#b20000" id="pin:opCUST2"     cx="640" cy="80"  r="3"/><text fill="#000000" font-size="14" x="663" y="84" >custom-2</text></g>
+    <g><circle fill="#b20000" id="pin:op48BIT2"    cx="740" cy="80"  r="3"/><text fill="#000000" font-size="14" x="763" y="84" >48bit</text></g>
+    
+	<g><circle fill="#b20000" id="pin:opBRANCH"    cx="40"  cy="100" r="3"/><text fill="#000000" font-size="14" x="63"  y="104">BRANCH</text></g>
+    <g><circle fill="#b20000" id="pin:opJALR"      cx="140" cy="100" r="3"/><text fill="#000000" font-size="14" x="163" y="104">JALR</text></g>
+    <g><circle fill="#b20000" id="pin:opRES1"      cx="240" cy="100" r="3"/><text fill="#000000" font-size="14" x="263" y="104">reserved</text></g>
+    <g><circle fill="#b20000" id="pin:opJAL"       cx="340" cy="100" r="3"/><text fill="#000000" font-size="14" x="363" y="104">JAL</text></g>
+    <g><circle fill="#b20000" id="pin:opSYSTEM"    cx="440" cy="100" r="3"/><text fill="#000000" font-size="14" x="463" y="104">SYSTEM</text></g>
+    <g><circle fill="#b20000" id="pin:opRES2"      cx="540" cy="100" r="3"/><text fill="#000000" font-size="14" x="563" y="104">reserved</text></g>
+    <g><circle fill="#b20000" id="pin:opCUST3"     cx="640" cy="100" r="3"/><text fill="#000000" font-size="14" x="663" y="104">custom-3</text></g>
+    <g><circle fill="#b20000" id="pin:op80BIT"     cx="740" cy="100" r="3"/><text fill="#000000" font-size="14" x="763" y="104">80bit</text></g>
+
+  <rect stroke="#a0a0a0" stroke-width="1" fill="#ffffff" fill-opacity="0.5" x="20" y="160" width="540" height="280"/>
+    <text fill="#000000" font-size="14" x="20" y="155" >"RV32I" Base Instructions</text>
+    
+    <g><circle fill="#b20000" id="pin:iJAL"       cx="40" cy="180" r="3"/><text fill="#000000" font-size="14" x="63" y="184">JAL</text></g>
+    <g><circle fill="#b20000" id="pin:iJALR"      cx="40" cy="200" r="3"/><text fill="#000000" font-size="14" x="63" y="204">JALR</text></g>
+    <g><circle fill="#b20000" id="pin:iBEQ"       cx="40" cy="240" r="3"/><text fill="#000000" font-size="14" x="63" y="244">BEQ</text></g>
+    <g><circle fill="#b20000" id="pin:iBNE"       cx="40" cy="260" r="3"/><text fill="#000000" font-size="14" x="63" y="264">BNE</text></g>
+    <g><circle fill="#b20000" id="pin:iBLT"       cx="40" cy="280" r="3"/><text fill="#000000" font-size="14" x="63" y="284">BLT</text></g>
+    <g><circle fill="#b20000" id="pin:iBGE"       cx="40" cy="300" r="3"/><text fill="#000000" font-size="14" x="63" y="304">BGE</text></g>
+    <g><circle fill="#b20000" id="pin:iBLTU"      cx="40" cy="320" r="3"/><text fill="#000000" font-size="14" x="63" y="324">BLTU</text></g>
+    <g><circle fill="#b20000" id="pin:iBGEU"      cx="40" cy="340" r="3"/><text fill="#000000" font-size="14" x="63" y="344">BGEU</text></g>
+    <g><circle fill="#b20000" id="pin:iLUI"       cx="40" cy="380" r="3"/><text fill="#000000" font-size="14" x="63" y="384">LUI</text></g>
+    <g><circle fill="#b20000" id="pin:iAUIPC"     cx="40" cy="400" r="3"/><text fill="#000000" font-size="14" x="63" y="404">AUIPC</text></g>
+
+    <g><circle fill="#b20000" id="pin:iLB"        cx="140" cy="180" r="3"/><text fill="#000000" font-size="14" x="163" y="184">LB</text></g>
+    <g><circle fill="#b20000" id="pin:iLH"        cx="140" cy="200" r="3"/><text fill="#000000" font-size="14" x="163" y="204">LH</text></g>
+    <g><circle fill="#b20000" id="pin:iLW"        cx="140" cy="220" r="3"/><text fill="#000000" font-size="14" x="163" y="224">LW</text></g>
+    <g><circle fill="#b20000" id="pin:iLBU"       cx="140" cy="240" r="3"/><text fill="#000000" font-size="14" x="163" y="244">LBU</text></g>
+    <g><circle fill="#b20000" id="pin:iLHU"       cx="140" cy="260" r="3"/><text fill="#000000" font-size="14" x="163" y="264">LHU</text></g>
+    <g><circle fill="#b20000" id="pin:iSB"        cx="140" cy="300" r="3"/><text fill="#000000" font-size="14" x="163" y="304">SB</text></g>
+    <g><circle fill="#b20000" id="pin:iSH"        cx="140" cy="320" r="3"/><text fill="#000000" font-size="14" x="163" y="324">SH</text></g>
+    <g><circle fill="#b20000" id="pin:iSW"        cx="140" cy="340" r="3"/><text fill="#000000" font-size="14" x="163" y="344">SW</text></g>
+
+    <g><circle fill="#b20000" id="pin:iSLLI"      cx="240" cy="180" r="3"/><text fill="#000000" font-size="14" x="263" y="184">SLLI</text></g>
+    <g><circle fill="#b20000" id="pin:iSRLI"      cx="240" cy="200" r="3"/><text fill="#000000" font-size="14" x="263" y="204">SRLI</text></g>
+    <g><circle fill="#b20000" id="pin:iSRAI"      cx="240" cy="220" r="3"/><text fill="#000000" font-size="14" x="263" y="224">SRAI</text></g>
+    <g><circle fill="#b20000" id="pin:iXORI"      cx="240" cy="260" r="3"/><text fill="#000000" font-size="14" x="263" y="264">XORI</text></g>
+    <g><circle fill="#b20000" id="pin:iORI"       cx="240" cy="280" r="3"/><text fill="#000000" font-size="14" x="263" y="284">ORI</text></g>
+    <g><circle fill="#b20000" id="pin:iANDI"      cx="240" cy="300" r="3"/><text fill="#000000" font-size="14" x="263" y="304">ANDI</text></g>
+    <g><circle fill="#b20000" id="pin:iSLTI"      cx="240" cy="340" r="3"/><text fill="#000000" font-size="14" x="263" y="344">SLTI</text></g>
+    <g><circle fill="#b20000" id="pin:iSLTIU"     cx="240" cy="360" r="3"/><text fill="#000000" font-size="14" x="263" y="364">SLTIU</text></g>
+    <g><circle fill="#b20000" id="pin:iADDI"      cx="240" cy="400" r="3"/><text fill="#000000" font-size="14" x="263" y="404">ADDI</text></g>
+
+    <g><circle fill="#b20000" id="pin:iSLL"       cx="340" cy="180" r="3"/><text fill="#000000" font-size="14" x="363" y="184">SLL</text></g>
+    <g><circle fill="#b20000" id="pin:iSRL"       cx="340" cy="200" r="3"/><text fill="#000000" font-size="14" x="363" y="204">SRL</text></g>
+    <g><circle fill="#b20000" id="pin:iSRA"       cx="340" cy="220" r="3"/><text fill="#000000" font-size="14" x="363" y="224">SRA</text></g>
+    <g><circle fill="#b20000" id="pin:iXOR"       cx="340" cy="260" r="3"/><text fill="#000000" font-size="14" x="363" y="264">XOR</text></g>
+    <g><circle fill="#b20000" id="pin:iOR"        cx="340" cy="280" r="3"/><text fill="#000000" font-size="14" x="363" y="284">OR</text></g>
+    <g><circle fill="#b20000" id="pin:iAND"       cx="340" cy="300" r="3"/><text fill="#000000" font-size="14" x="363" y="304">AND</text></g>
+    <g><circle fill="#b20000" id="pin:iSLT"       cx="340" cy="340" r="3"/><text fill="#000000" font-size="14" x="363" y="344">SLT</text></g>
+    <g><circle fill="#b20000" id="pin:iSLTU"      cx="340" cy="360" r="3"/><text fill="#000000" font-size="14" x="363" y="364">SLTU</text></g>
+    <g><circle fill="#b20000" id="pin:iADD"       cx="340" cy="400" r="3"/><text fill="#000000" font-size="14" x="363" y="404">ADD</text></g>
+    <g><circle fill="#b20000" id="pin:iSUB"       cx="340" cy="420" r="3"/><text fill="#000000" font-size="14" x="363" y="424">SUB</text></g>
+	
+    <g><circle fill="#b20000" id="pin:iFENCE"     cx="440" cy="180" r="3"/><text fill="#000000" font-size="14" x="463" y="184">FENCE</text></g>
+    <g><circle fill="#b20000" id="pin:iFENCE.TSO" cx="440" cy="200" r="3"/><text fill="#000000" font-size="14" x="463" y="204">FENCE.TSO</text></g>
+    <g><circle fill="#b20000" id="pin:iECALL"     cx="440" cy="240" r="3"/><text fill="#000000" font-size="14" x="463" y="244">ECALL</text></g>
+    <g><circle fill="#b20000" id="pin:iEBREAK"    cx="440" cy="260" r="3"/><text fill="#000000" font-size="14" x="463" y="264">EBREAK</text></g>
+    <g><circle fill="#b20000" id="pin:iNOP"       cx="440" cy="300" r="3"/><text fill="#000000" font-size="14" x="463" y="304">NOP</text></g>
+
+  <rect stroke="#a0a0a0" stroke-width="1" fill="#ffffff" fill-opacity="0.5" x="20" y="460" width="540" height="40"/>
+    <text fill="#000000" font-size="14" x="20" y="455" >"Zifencei" Standard Extension</text>
+
+    <g><circle fill="#b20000" id="pin:iFENCE.I"   cx="40"  cy="480" r="3"/><text fill="#000000" font-size="14" x="63"  y="484">FENCE.I</text></g>
+
+  <rect stroke="#a0a0a0" stroke-width="1" fill="#ffffff" fill-opacity="0.5" x="20" y="520" width="540" height="80"/>
+    <text fill="#000000" font-size="14" x="20" y="515" >"Zicsr" Standard Extension</text>
+	
+    <g><circle fill="#b20000" id="pin:iCSRRW"     cx="40"  cy="540" r="3"/><text fill="#000000" font-size="14" x="63"  y="544">CSRRW</text></g>
+    <g><circle fill="#b20000" id="pin:iCSRRS"     cx="40"  cy="560" r="3"/><text fill="#000000" font-size="14" x="63"  y="564">CSRRS</text></g>
+    <g><circle fill="#b20000" id="pin:iCSRRC"     cx="40"  cy="580" r="3"/><text fill="#000000" font-size="14" x="63"  y="584">CSRRC</text></g>
+    <g><circle fill="#b20000" id="pin:iCSRRWI"    cx="140" cy="540" r="3"/><text fill="#000000" font-size="14" x="163" y="544">CSRRWI</text></g>
+    <g><circle fill="#b20000" id="pin:iCSRRSI"    cx="140" cy="560" r="3"/><text fill="#000000" font-size="14" x="163" y="564">CSRRSI</text></g>
+    <g><circle fill="#b20000" id="pin:iCSRRCI"    cx="140" cy="580" r="3"/><text fill="#000000" font-size="14" x="163" y="584">CSRRCI</text></g>
+
+    <text fill="#000000" font-size="14" x="240" y="544">CSR-Address</text>
+	<circle fill="#b20000" id="pin:iCSRaddr11" cx="240" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr10" cx="260" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr9"  cx="280" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr8"  cx="300" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr7"  cx="320" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr6"  cx="340" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr5"  cx="360" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr4"  cx="380" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr3"  cx="400" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr2"  cx="420" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr1"  cx="440" cy="560" r="3"/>
+    <circle fill="#b20000" id="pin:iCSRaddr0"  cx="460" cy="560" r="3"/>
+
+  <rect stroke="#a0a0a0" stroke-width="1" fill="#ffffff" fill-opacity="0.5" x="20" y="620" width="220" height="100"/>
+    <text fill="#000000" font-size="14" x="20" y="615" >"M" Standard Extension</text>
+	
+    <g><circle fill="#b20000" id="pin:iMUL"       cx="40"  cy="640" r="3"/><text fill="#000000" font-size="14" x="63"  y="644">MUL</text></g>
+    <g><circle fill="#b20000" id="pin:iMULH"      cx="40"  cy="660" r="3"/><text fill="#000000" font-size="14" x="63"  y="664">MULH</text></g>
+    <g><circle fill="#b20000" id="pin:iMULHSU"    cx="40"  cy="680" r="3"/><text fill="#000000" font-size="14" x="63"  y="684">MULHSU</text></g>
+    <g><circle fill="#b20000" id="pin:iMULHU"     cx="40"  cy="700" r="3"/><text fill="#000000" font-size="14" x="63"  y="704">MULHU</text></g>
+    <g><circle fill="#b20000" id="pin:iDIV"       cx="140" cy="640" r="3"/><text fill="#000000" font-size="14" x="163" y="644">DIV</text></g>
+    <g><circle fill="#b20000" id="pin:iDIVU"      cx="140" cy="660" r="3"/><text fill="#000000" font-size="14" x="163" y="664">DIVU</text></g>
+    <g><circle fill="#b20000" id="pin:iREM"       cx="140" cy="680" r="3"/><text fill="#000000" font-size="14" x="163" y="684">REM</text></g>
+    <g><circle fill="#b20000" id="pin:iREMU"      cx="140" cy="700" r="3"/><text fill="#000000" font-size="14" x="163" y="704">REMU</text></g>
+
+  <g>
+    <circle fill="#0000b2" id="pin:Inst" cx="0" cy="-20" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="-14">Inst</text>
+  </g>
+  <g>
+    <circle fill="#b20000" id="pin:Illegal" cx="0" cy="-40" r="3"/>
+    <text fill="#808080" font-size="18" x="4" y="-34">Illegal</text>
+  </g>
+</svg>

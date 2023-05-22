@@ -5,3 +5,4 @@
 
 #include "rules-RV32I.ucode"
 #include "rules-RV32M.ucode"
+#include "rules-RV32Zicsr.ucode"

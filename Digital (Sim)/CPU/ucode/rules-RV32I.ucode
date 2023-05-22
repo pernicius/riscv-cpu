@@ -16,40 +16,40 @@
 // AUIPC
 .RULE { (opcode=0b00101),               (Valid_instr, Imm_ctrl=U_type, A_mux=PC, B_mux=IMM, rd_en) }
 
-// JAL ==TODO==
+// JAL
 .RULE { (opcode=0b11011),               (Valid_instr, Imm_ctrl=J_type, J_JAL, rd_en) }
-// JALR ==TODO==
+// JALR
 .RULE { (opcode=0b11001, funct3=0b000), (Valid_instr, Imm_ctrl=I_type, J_JALR, rd_en, rs1_en) }
 
-// BEQ ==TODO==
+// BEQ
 .RULE { (opcode=0b11000, funct3=0b000), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SUB) }
-// BNE ==TODO==
+// BNE
 .RULE { (opcode=0b11000, funct3=0b001), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SUB) }
-// BLT ==TODO==
+// BLT
 .RULE { (opcode=0b11000, funct3=0b100), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLT) }
-// BGE ==TODO==
+// BGE
 .RULE { (opcode=0b11000, funct3=0b101), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLT) }
-// BLTU ==TODO==
+// BLTU
 .RULE { (opcode=0b11000, funct3=0b110), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
-// BGEU ==TODO==
+// BGEU
 .RULE { (opcode=0b11000, funct3=0b111), (Valid_instr, Branch, Imm_ctrl=B_type, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
 
-// LB ==TODO==
+// LB
 .RULE { (opcode=0b00000, funct3=0b000), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
-// LH ==TODO==
+// LH
 .RULE { (opcode=0b00000, funct3=0b001), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
-// LW ==TODO==
+// LW
 .RULE { (opcode=0b00000, funct3=0b010), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
-// LBU ==TODO==
+// LBU
 .RULE { (opcode=0b00000, funct3=0b100), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
-// LHU ==TODO==
+// LHU
 .RULE { (opcode=0b00000, funct3=0b101), (Valid_instr, Imm_ctrl=I_type, B_mux=IMM, rd_en, rs1_en, ALU_ctrl=ALU_ADD, Mem_rd, Mem_mux=MEM_MEM) }
 
-// SB ==TODO==
+// SB
 .RULE { (opcode=0b01000, funct3=0b000), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
-// SH ==TODO==
+// SH
 .RULE { (opcode=0b01000, funct3=0b001), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
-// SW ==TODO==
+// SW
 .RULE { (opcode=0b01000, funct3=0b010), (Valid_instr, Imm_ctrl=S_type, B_mux=IMM, rs1_en, rs2_en, ALU_ctrl=ALU_ADD, Mem_wr) }
 
 // ADDI
@@ -92,16 +92,23 @@
 // SLTU
 .RULE { (opcode=0b01100, funct3=0b011, funct7=0b0000000), (Valid_instr, Imm_ctrl=R_type, rd_en, rs1_en, rs2_en, ALU_ctrl=ALU_SLTU) }
 
-//	// FENCE ==TODO==
+//	// FENCE
 //	.RULE { (opcode=0b00011, funct3=0b000, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type) }
-//	// FENCE.TSO (optional) ==TODO==
+//	// FENCE.TSO (optional)
 //	//.RULE { (opcode=0b00011, funct3=0b000, funct7=0b0000000), (Valid_instr, Imm_ctrl=I_type) }
 
-//	// ECALL ==TODO==
-//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00000, rs1=0b00000, rd=0b00000), (Valid_instr, Imm_ctrl=I_type) }
-//	// EBREAK ==TODO==
-//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00001, rs1=0b00000, rd=0b00000), (Valid_instr, Imm_ctrl=I_type) }
+//	// ECALL
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00000, rs1=0b00000, rd=0b00000), (Valid_instr) }
+//	// EBREAK
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0000000, rs2=0b00001, rs1=0b00000, rd=0b00000), (Valid_instr) }
 
+//  // SRET
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0001000, rs2=0b00010, rs1=0b00000, rd=0b00000), (Valid_instr) }
+//  // MRET
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0011000, rs2=0b00010, rs1=0b00000, rd=0b00000), (Valid_instr) }
+
+//  // WFI
+//	.RULE { (opcode=0b11100, funct3=0b000, funct7=0b0001000, rs2=0b00001, rs1=0b00000, rd=0b00000), (Valid_instr) }
 
 
 // some spezial opcodes
