@@ -14,6 +14,6 @@ A simulated, pipelined, 32bit Risc-V CPU using [Digital](https://github.com/hnee
 ### Later features:
 - User/Supervisor/Machine-Mode
 - Memory Management Unit (MMU)
-- some form of memory protection
-- Interupts (PLIC and/or [CLIC](https://github.com/riscv/riscv-fast-interrupt/blob/master/clic.pdf))
+- Memory Protection Unit (MPU)
+- Interupts ([PLIC](https://github.com/riscv/riscv-plic-spec) and/or [CLIC](https://github.com/riscv/riscv-fast-interrupt))
 - Exceptions
